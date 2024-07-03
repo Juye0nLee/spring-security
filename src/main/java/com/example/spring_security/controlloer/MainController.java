@@ -2,8 +2,12 @@ package com.example.spring_security.controlloer;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller
+@Controller("/")
 public class MainController {
-
+    @GetMapping
+    public String mainPage(){
+        return "main";
+    }
 }
